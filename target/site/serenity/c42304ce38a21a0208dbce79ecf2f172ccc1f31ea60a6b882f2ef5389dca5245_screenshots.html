@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">SOLI APP - Pruebas Automatizadas Android App</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="be1d0bd53c912b41f1b864f658653253c5f07ff1e592913190bb41e2f2405a52.html">SOLI BCP</a></span>
+                > <span class="truncate-60"><a
+                    href="c42304ce38a21a0208dbce79ecf2f172ccc1f31ea60a6b882f2ef5389dca5245.html">Realizar el logueo de usuario ya existente </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-08-2023 17:57</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">SOLI BCP </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2e64d7a96de32ac66d29275e8b86c05125d8adc1bf3c096c7267b02b7d728ec6.html">Login Soli
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Realizar el logueo de usuario ya existente
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado Ingreso a soli<br>Y valido que estoy dentro de soli<br>Cuando ingreso opcion ya tengo cuenta<br>Y ingreso mi celular &quot;&lt;celular&gt;&quot;<br>Y ingreso mi password &quot;&lt;password&gt;&quot;<br>Y doy clic al boton ingresar<br>Entonces valido que inicie sesion</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is enabled but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.bcp.questions.IsEnabled.answeredBy(IsEnabled.java:27)<br />co.com.bcp.steps.soli.LoginSteps.validoQueInicieSesion(LoginSteps.java:50)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource6451468739480067744.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2b4c7f7d0d8a825b4b7e33ac4e940482fb28139ca90d1cde2cd86a3d2cc001a0.png" title=" 1: Realizar el logueo de usuario ya existente ({celular=71542767, password=1234})" width="1440"/>
+                <img src="2b4c7f7d0d8a825b4b7e33ac4e940482fb28139ca90d1cde2cd86a3d2cc001a0.png" title=" Dado Ingreso a soli" width="1440"/>
+                <img src="2b4c7f7d0d8a825b4b7e33ac4e940482fb28139ca90d1cde2cd86a3d2cc001a0.png" title=" Y valido que estoy dentro de soli" width="1440"/>
+                <img src="5de49bdd1cfd2399165d06a4a29ccdbf30fb3ccb91b2c7c13fcbba6863ab5c64.png" title=" Then the Ingreso a loguearme is enabled -  should be (true)" width="1440"/>
+                <img src="5de49bdd1cfd2399165d06a4a29ccdbf30fb3ccb91b2c7c13fcbba6863ab5c64.png" title=" Y valido que estoy dentro de soli (completed)" width="1440"/>
+                <img src="5de49bdd1cfd2399165d06a4a29ccdbf30fb3ccb91b2c7c13fcbba6863ab5c64.png" title=" Cuando ingreso opcion ya tengo cuenta" width="1440"/>
+                <img src="5de49bdd1cfd2399165d06a4a29ccdbf30fb3ccb91b2c7c13fcbba6863ab5c64.png" title=" Tester pantalla tengo cuenta" width="1440"/>
+                <img src="5de49bdd1cfd2399165d06a4a29ccdbf30fb3ccb91b2c7c13fcbba6863ab5c64.png" title=" TESTER clicks on Ingreso a loguearme" width="1440"/>
+                <img src="b4cad507ff566f89ede25a0a3854b84145f46b9a19d8c80c819f02b6ae744cd7.png" title=" Tester pantalla tengo cuenta (completed)" width="1440"/>
+                <img src="0279c4eaac4b3d07a845bc352f96972f9223189dbeb07902acf617f9d1dbb049.png" title=" Cuando ingreso opcion ya tengo cuenta (completed)" width="1440"/>
+                <img src="0279c4eaac4b3d07a845bc352f96972f9223189dbeb07902acf617f9d1dbb049.png" title=" Y ingreso mi celular &quot;71542767&quot;" width="1440"/>
+                <img src="f7b9fb473e6489cf2157addd63a991e3113c6858079877656730112c60d9a472.png" title=" Tester ingreso celular registrado" width="1440"/>
+                <img src="f7b9fb473e6489cf2157addd63a991e3113c6858079877656730112c60d9a472.png" title=" TESTER clicks on Ingreso celular" width="1440"/>
+                <img src="8be9ff94d195e40767f0c394c933e32e6aa0ef754d2bec622f55fa576b84e2b6.png" title=" TESTER clicks on Ingreso celular (completed)" width="1440"/>
+                <img src="8be9ff94d195e40767f0c394c933e32e6aa0ef754d2bec622f55fa576b84e2b6.png" title=" TESTER enters '71542767' into Ingreso celular" width="1440"/>
+                <img src="66e36afd68ee13b2b91bf5f6be301182df00d6797276b19ff372e8b6393894d3.png" title=" TESTER enters '71542767' into Ingreso celular (completed)" width="1440"/>
+                <img src="66e36afd68ee13b2b91bf5f6be301182df00d6797276b19ff372e8b6393894d3.png" title=" Tester ingreso celular registrado (completed)" width="1440"/>
+                <img src="66e36afd68ee13b2b91bf5f6be301182df00d6797276b19ff372e8b6393894d3.png" title=" Y ingreso mi celular &quot;71542767&quot; (completed)" width="1440"/>
+                <img src="dc29b2d0e44226f10315366ca0598decf957275327ba59481d9a8370c0e18b5c.png" title=" Y ingreso mi password &quot;1234&quot;" width="1440"/>
+                <img src="6c93a0a6ef053c57affcb389cf4b305f1b069a3cc31c7399fba548e40571a4ae.png" title=" Tester ingreso password" width="1440"/>
+                <img src="de3833edf2223ee9997abe1ae79270131ff323bef0b9321b77c22f5a1f773f52.png" title=" TESTER enters '1' into Ingreso pin1" width="1440"/>
+                <img src="73d047d3df2352543eab04433319830eb2e254638a3bc859482636f447fab047.png" title=" TESTER enters '1' into Ingreso pin1 (completed)" width="1440"/>
+                <img src="73d047d3df2352543eab04433319830eb2e254638a3bc859482636f447fab047.png" title=" TESTER enters '2' into Ingreso pin2" width="1440"/>
+                <img src="a16827b6918d7a57230e61d25e724212fc35d9f6b9b186f483788e6ed9443d45.png" title=" TESTER enters '2' into Ingreso pin2 (completed)" width="1440"/>
+                <img src="a16827b6918d7a57230e61d25e724212fc35d9f6b9b186f483788e6ed9443d45.png" title=" TESTER enters '3' into Ingreso pin3" width="1440"/>
+                <img src="96de2c9d41dc6db276b96c3fe58c44a7fdb6a7ffcc02632158f974667df11dd4.png" title=" TESTER enters '3' into Ingreso pin3 (completed)" width="1440"/>
+                <img src="96de2c9d41dc6db276b96c3fe58c44a7fdb6a7ffcc02632158f974667df11dd4.png" title=" TESTER enters '4' into Ingreso pin4" width="1440"/>
+                <img src="7cb8b50c9db7c11524fb003afb9cdb78a23804019139835f75f7e1f3b278fdb5.png" title=" TESTER enters '4' into Ingreso pin4 (completed)" width="1440"/>
+                <img src="7cb8b50c9db7c11524fb003afb9cdb78a23804019139835f75f7e1f3b278fdb5.png" title=" Tester ingreso password (completed)" width="1440"/>
+                <img src="06e371a57725c0f073348369ab5ac87ed8235cfb288521ce22d7556e9bcee18a.png" title=" Y ingreso mi password &quot;1234&quot; (completed)" width="1440"/>
+                <img src="06e371a57725c0f073348369ab5ac87ed8235cfb288521ce22d7556e9bcee18a.png" title=" Y doy clic al boton ingresar" width="1440"/>
+                <img src="bc5318da3b4a8a20da44dac9fd94e9c93e476724064ed22639e6a728c6cf049a.png" title=" Tester ingreso soli" width="1440"/>
+                <img src="06e371a57725c0f073348369ab5ac87ed8235cfb288521ce22d7556e9bcee18a.png" title=" TESTER clicks on Boton de Logueo Usuario" width="1440"/>
+                <img src="5cd0f5efbf921cf5bd974be761032a3a33ed090899764aaaa14c8d738c2c2b18.png" title=" TESTER clicks on Boton de Logueo Usuario (completed)" width="1440"/>
+                <img src="fa8c60525ec4751ed36e9f16a2fbddffc5b8db2d17c2e5b2c320504a07b1df50.png" title=" Tester ingreso soli (completed)" width="1440"/>
+                <img src="fa8c60525ec4751ed36e9f16a2fbddffc5b8db2d17c2e5b2c320504a07b1df50.png" title=" Y doy clic al boton ingresar (completed)" width="1440"/>
+                <img src="fa8c60525ec4751ed36e9f16a2fbddffc5b8db2d17c2e5b2c320504a07b1df50.png" title=" Entonces valido que inicie sesion" width="1440"/>
+                <img src="5c89e4b8f058599b1e24304b48ab3448400750466b1313c71ac9bfee99638998.png" title=" Then the Valido inicio sesion is enabled -  should be (true)" width="1440"/>
+                <img src="0a4cf5ad5f23f60af4239c9fd3de2336bcd65cdaecedd760099f9694047b6f0b.png" title=" Then the Valido inicio sesion is enabled -  should be (true) (completed)" width="1440"/>
+                <img src="0a4cf5ad5f23f60af4239c9fd3de2336bcd65cdaecedd760099f9694047b6f0b.png" title=" Entonces valido que inicie sesion (completed)" width="1440"/>
+                <img src="c651b3205b8a9f0027e25ac340858d72f96ba798b9838e43cf0f2bccb26b9e24.png" title=" 2: Realizar el logueo de usuario ya existente ({celular=71532355, password=1234})" width="1440"/>
+                <img src="c651b3205b8a9f0027e25ac340858d72f96ba798b9838e43cf0f2bccb26b9e24.png" title=" Dado Ingreso a soli" width="1440"/>
+                <img src="c651b3205b8a9f0027e25ac340858d72f96ba798b9838e43cf0f2bccb26b9e24.png" title=" Y valido que estoy dentro de soli" width="1440"/>
+                <img src="a3ff0a3ee5fc7b93d3a0025ff942de5f20b1bae61db20ba51dc5093318dcb892.png" title=" Then the Ingreso a loguearme is enabled -  should be (true)" width="1440"/>
+                <img src="a3ff0a3ee5fc7b93d3a0025ff942de5f20b1bae61db20ba51dc5093318dcb892.png" title=" Y valido que estoy dentro de soli (completed)" width="1440"/>
+                <img src="a3ff0a3ee5fc7b93d3a0025ff942de5f20b1bae61db20ba51dc5093318dcb892.png" title=" Cuando ingreso opcion ya tengo cuenta" width="1440"/>
+                <img src="a3ff0a3ee5fc7b93d3a0025ff942de5f20b1bae61db20ba51dc5093318dcb892.png" title=" Tester pantalla tengo cuenta" width="1440"/>
+                <img src="a3ff0a3ee5fc7b93d3a0025ff942de5f20b1bae61db20ba51dc5093318dcb892.png" title=" TESTER clicks on Ingreso a loguearme" width="1440"/>
+                <img src="358049a160f163fca8bab61e4a6d48a9cdb8bdc053d010cc667798c6794f11b9.png" title=" Tester pantalla tengo cuenta (completed)" width="1440"/>
+                <img src="770472071d79d1ecf4d8a4b665d84e0ff6ea67659ba66ca54261c6fa0aebaf41.png" title=" Cuando ingreso opcion ya tengo cuenta (completed)" width="1440"/>
+                <img src="770472071d79d1ecf4d8a4b665d84e0ff6ea67659ba66ca54261c6fa0aebaf41.png" title=" Y ingreso mi celular &quot;71532355&quot;" width="1440"/>
+                <img src="72211fd861f4356891cc2e8e2f8f73fcfd0e9ed705ee89e193caa699309b63f6.png" title=" Tester ingreso celular registrado" width="1440"/>
+                <img src="72211fd861f4356891cc2e8e2f8f73fcfd0e9ed705ee89e193caa699309b63f6.png" title=" TESTER clicks on Ingreso celular" width="1440"/>
+                <img src="6d35e622165664c634d63aff22f6852bd146daed3950a5e02158aeda3cc02e4b.png" title=" TESTER clicks on Ingreso celular (completed)" width="1440"/>
+                <img src="6d35e622165664c634d63aff22f6852bd146daed3950a5e02158aeda3cc02e4b.png" title=" TESTER enters '71532355' into Ingreso celular" width="1440"/>
+                <img src="c3ae347ed7916cc34c69e9ea044e6361f40e2eb8cd6e8e6dcca9a585ad6a2665.png" title=" TESTER enters '71532355' into Ingreso celular (completed)" width="1440"/>
+                <img src="c3ae347ed7916cc34c69e9ea044e6361f40e2eb8cd6e8e6dcca9a585ad6a2665.png" title=" Tester ingreso celular registrado (completed)" width="1440"/>
+                <img src="c3ae347ed7916cc34c69e9ea044e6361f40e2eb8cd6e8e6dcca9a585ad6a2665.png" title=" Y ingreso mi celular &quot;71532355&quot; (completed)" width="1440"/>
+                <img src="3e8734d7ff59d5e04928a3d806da4002ae6fa49055457cb19d17965c9305a81e.png" title=" Y ingreso mi password &quot;1234&quot;" width="1440"/>
+                <img src="c3ae347ed7916cc34c69e9ea044e6361f40e2eb8cd6e8e6dcca9a585ad6a2665.png" title=" Tester ingreso password" width="1440"/>
+                <img src="3e8734d7ff59d5e04928a3d806da4002ae6fa49055457cb19d17965c9305a81e.png" title=" TESTER enters '1' into Ingreso pin1" width="1440"/>
+                <img src="bdbb382571156fc2fd7ca1d796119bdb23dcdf45d2b49ddee7398809459fa753.png" title=" TESTER enters '1' into Ingreso pin1 (completed)" width="1440"/>
+                <img src="bdbb382571156fc2fd7ca1d796119bdb23dcdf45d2b49ddee7398809459fa753.png" title=" TESTER enters '2' into Ingreso pin2" width="1440"/>
+                <img src="441976ec7babcb973c5a9344a37b3f9e14d0ab3a287e9d275b01a8f721c2432b.png" title=" TESTER enters '2' into Ingreso pin2 (completed)" width="1440"/>
+                <img src="441976ec7babcb973c5a9344a37b3f9e14d0ab3a287e9d275b01a8f721c2432b.png" title=" TESTER enters '3' into Ingreso pin3" width="1440"/>
+                <img src="d39f39c2c81105b51d986bf9c80be4113072eaeb990dbfd7693b00162110b2c6.png" title=" TESTER enters '3' into Ingreso pin3 (completed)" width="1440"/>
+                <img src="d39f39c2c81105b51d986bf9c80be4113072eaeb990dbfd7693b00162110b2c6.png" title=" TESTER enters '4' into Ingreso pin4" width="1440"/>
+                <img src="26b67db69e4a5088811d45f60de1a51c8c8ed0061b983635084443dcb0e2539f.png" title=" TESTER enters '4' into Ingreso pin4 (completed)" width="1440"/>
+                <img src="26b67db69e4a5088811d45f60de1a51c8c8ed0061b983635084443dcb0e2539f.png" title=" Tester ingreso password (completed)" width="1440"/>
+                <img src="eafa7d94237f02314adf3db5843bb0e5cfe721c635fb543bab8a318ecef1ce2d.png" title=" Y ingreso mi password &quot;1234&quot; (completed)" width="1440"/>
+                <img src="eafa7d94237f02314adf3db5843bb0e5cfe721c635fb543bab8a318ecef1ce2d.png" title=" Y doy clic al boton ingresar" width="1440"/>
+                <img src="bc0fa64c91b76e6f20b804fa55ef03cf59ab15544c6b8f4d59d169b6eb8f3967.png" title=" Tester ingreso soli" width="1440"/>
+                <img src="4930dbc912a198676cac1d0ab709181836f39f4d9666fb5d026c23d8c7df2884.png" title=" TESTER clicks on Boton de Logueo Usuario" width="1440"/>
+                <img src="b189fe58f5c9f2bee9d3d6378cca0658f0c3735652fb28a25b63b2e7636adc9f.png" title=" TESTER clicks on Boton de Logueo Usuario (completed)" width="1440"/>
+                <img src="ff5897536bfc72b2874268c1a5cec9f209fec71d2bf424159cc59d86d0af91f8.png" title=" Tester ingreso soli (completed)" width="1440"/>
+                <img src="ff5897536bfc72b2874268c1a5cec9f209fec71d2bf424159cc59d86d0af91f8.png" title=" Y doy clic al boton ingresar (completed)" width="1440"/>
+                <img src="48e0ca10e2def6d6497e721fa6b8677fe6c462d80fcbae4aceffe015fdb8c3f0.png" title=" Entonces valido que inicie sesion" width="1440"/>
+                <img src="48e0ca10e2def6d6497e721fa6b8677fe6c462d80fcbae4aceffe015fdb8c3f0.png" title=" Then the Valido inicio sesion is enabled -  should be (true): <span class='failing-color'>FAILURE</span>" width="1440"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.10</span>
+</div>
+</body>
+</html>

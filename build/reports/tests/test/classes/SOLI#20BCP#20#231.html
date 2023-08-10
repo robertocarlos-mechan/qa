@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class SOLI BCP #1</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class SOLI BCP #1</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; SOLI BCP #1</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m55.26s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Realizar el logueo de usuario ya existente #2"></a>
+<h3 class="failures">Realizar el logueo de usuario ya existente #2</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
+	at co.com.bcp.steps.soli.LoginSteps.validoQueInicieSesion(LoginSteps.java:50)
+	at ✽.valido que inicie sesion(file:///C:/automatizacion/bcp-soli-mobile-automation-testing/src/test/resources/features/soli/login.feature:13)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Realizar el logueo de usuario ya existente #1</td>
+<td class="success">59.721s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Realizar el logueo de usuario ya existente #2</td>
+<td class="failures">55.536s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@login_soli
+Esquema del escenario: Realizar el logueo de usuario ya existente ?[90m# src/test/resources/features/soli/login.feature:16?[0m
+?[92m|-- 1: Realizar el logueo de usuario ya existente ({celular=71542767, password=1234})?[0m
+?[92m|---- Dado Ingreso a soli?[0m
+  ?[32mDado ?[0m?[32mIngreso a soli?[0m                                             ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoASoli()?[0m
+?[92m|---- Y valido que estoy dentro de soli?[0m
+?[92m|------ Then the Ingreso a loguearme is enabled -  should be (true)?[0m
+  ?[32mY ?[0m?[32mvalido que estoy dentro de soli?[0m                               ?[90m# co.com.bcp.steps.soli.LoginSteps.validoQueEstoyDentroDeSoli()?[0m
+?[92m|---- Cuando ingreso opcion ya tengo cuenta?[0m
+?[92m|------ Tester pantalla tengo cuenta?[0m
+?[92m|-------- TESTER clicks on Ingreso a loguearme?[0m
+  ?[32mCuando ?[0m?[32mingreso opcion ya tengo cuenta?[0m                           ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoOpcionYaTengoCuenta()?[0m
+?[92m|---- Y ingreso mi celular &quot;71542767&quot;?[0m
+?[92m|------ Tester ingreso celular registrado?[0m
+?[92m|-------- TESTER clicks on Ingreso celular?[0m
+?[92m|-------- TESTER enters '71542767' into Ingreso celular?[0m
+  ?[32mY ?[0m?[32mingreso mi celular ?[0m?[32m?[1m&quot;71542767&quot;?[0m                                 ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoMiCelular(java.lang.String)?[0m
+?[92m|---- Y ingreso mi password &quot;1234&quot;?[0m
+?[92m|------ Tester ingreso password?[0m
+?[92m|-------- TESTER enters '1' into Ingreso pin1?[0m
+?[92m|-------- TESTER enters '2' into Ingreso pin2?[0m
+?[92m|-------- TESTER enters '3' into Ingreso pin3?[0m
+?[92m|-------- TESTER enters '4' into Ingreso pin4?[0m
+  ?[32mY ?[0m?[32mingreso mi password ?[0m?[32m?[1m&quot;1234&quot;?[0m                                    ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoMiPassword(java.lang.String)?[0m
+?[92m|---- Y doy clic al boton ingresar?[0m
+?[92m|------ Tester ingreso soli?[0m
+?[92m|-------- TESTER clicks on Boton de Logueo Usuario?[0m
+  ?[32mY ?[0m?[32mdoy clic al boton ingresar?[0m                                    ?[90m# co.com.bcp.steps.soli.LoginSteps.doyClicAlBotonIngresar()?[0m
+?[92m|---- Entonces valido que inicie sesion?[0m
+?[92m|------ Then the Valido inicio sesion is enabled -  should be (true)?[0m
+  ?[32mEntonces ?[0m?[32mvalido que inicie sesion?[0m                               ?[90m# co.com.bcp.steps.soli.LoginSteps.validoQueInicieSesion()?[0m
+
+@login_soli
+Esquema del escenario: Realizar el logueo de usuario ya existente ?[90m# src/test/resources/features/soli/login.feature:17?[0m
+?[92m|-- 2: Realizar el logueo de usuario ya existente ({celular=71532355, password=1234})?[0m
+?[92m|---- Dado Ingreso a soli?[0m
+  ?[32mDado ?[0m?[32mIngreso a soli?[0m                                             ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoASoli()?[0m
+?[92m|---- Y valido que estoy dentro de soli?[0m
+?[92m|------ Then the Ingreso a loguearme is enabled -  should be (true)?[0m
+  ?[32mY ?[0m?[32mvalido que estoy dentro de soli?[0m                               ?[90m# co.com.bcp.steps.soli.LoginSteps.validoQueEstoyDentroDeSoli()?[0m
+?[92m|---- Cuando ingreso opcion ya tengo cuenta?[0m
+?[92m|------ Tester pantalla tengo cuenta?[0m
+?[92m|-------- TESTER clicks on Ingreso a loguearme?[0m
+  ?[32mCuando ?[0m?[32mingreso opcion ya tengo cuenta?[0m                           ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoOpcionYaTengoCuenta()?[0m
+?[92m|---- Y ingreso mi celular &quot;71532355&quot;?[0m
+?[92m|------ Tester ingreso celular registrado?[0m
+?[92m|-------- TESTER clicks on Ingreso celular?[0m
+?[92m|-------- TESTER enters '71532355' into Ingreso celular?[0m
+  ?[32mY ?[0m?[32mingreso mi celular ?[0m?[32m?[1m&quot;71532355&quot;?[0m                                 ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoMiCelular(java.lang.String)?[0m
+?[92m|---- Y ingreso mi password &quot;1234&quot;?[0m
+?[92m|------ Tester ingreso password?[0m
+?[92m|-------- TESTER enters '1' into Ingreso pin1?[0m
+?[92m|-------- TESTER enters '2' into Ingreso pin2?[0m
+?[92m|-------- TESTER enters '3' into Ingreso pin3?[0m
+?[92m|-------- TESTER enters '4' into Ingreso pin4?[0m
+  ?[32mY ?[0m?[32mingreso mi password ?[0m?[32m?[1m&quot;1234&quot;?[0m                                    ?[90m# co.com.bcp.steps.soli.LoginSteps.ingresoMiPassword(java.lang.String)?[0m
+?[92m|---- Y doy clic al boton ingresar?[0m
+?[92m|------ Tester ingreso soli?[0m
+?[92m|-------- TESTER clicks on Boton de Logueo Usuario?[0m
+  ?[32mY ?[0m?[32mdoy clic al boton ingresar?[0m                                    ?[90m# co.com.bcp.steps.soli.LoginSteps.doyClicAlBotonIngresar()?[0m
+?[92m|---- Entonces valido que inicie sesion?[0m
+?[92m|------ Then the Valido inicio sesion is enabled -  should be (true)?[0m
+?[92m|-------- Answered by: TESTER?[0m
+  ?[31mEntonces ?[0m?[31mvalido que inicie sesion?[0m                               ?[90m# co.com.bcp.steps.soli.LoginSteps.validoQueInicieSesion()?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
+	at co.com.bcp.steps.soli.LoginSteps.validoQueInicieSesion(LoginSteps.java:50)
+	at âœ½.valido que inicie sesion(file:///C:/automatizacion/bcp-soli-mobile-automation-testing/src/test/resources/features/soli/login.feature:13)
+?[0m
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/automatizacion/bcp-soli-mobile-automation-testing/src/test/resources/features/soli/login.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Realizar el logueo de usuario ya existente(soli-bcp;realizar-el-logueo-de-usuario-ya-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Realizar el logueo de usuario ya existente
+----------------------------------------------------------------------?[0m
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/automatizacion/bcp-soli-mobile-automation-testing/src/test/resources/features/soli/login.feature
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] INFO  - ?[91mSTEP FAILURE: java.lang.AssertionError: 
+Expected: an element that is enabled
+     but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+Realizar el logueo de usuario ya existente
+-----------------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Entonces valido que inicie sesion?[0m
+[Test worker] ERROR  - ?[91m    Expected: an element that is enabled but: no matching element found by [Valido inicio sesion located with: xpath: //android.widget.TextView[contains(@text,'Saldo')]] was not enabled?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Aug 7, 2023 5:59:28 PM</p>
+</div>
+</div>
+</body>
+</html>
