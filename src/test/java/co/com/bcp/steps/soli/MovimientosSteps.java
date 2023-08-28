@@ -32,4 +32,14 @@ public class MovimientosSteps {
     public void validoElSaldoDisponible() {
         TESTER.should(seeThat(IsEnabled.theTarget(LBL_SALDO_DISPONIBLE), equalTo(true)));
     }
+    @Screenshots()
+    @Y("ingreso consultar otras transferencias")
+    public void ingresoConsultarOtrasTransferencias() {
+        TESTER.attemptsTo(OpcionTransferenciaOB.element());
+    }
+
+    @Y("ingreso consultar retiro dinero")
+    public void ingresoConsultarRetiroDinero() {
+        TESTER.attemptsTo(OpcionRetiroDinero.element());
+    }
 }
