@@ -18,8 +18,8 @@ Característica: SOLI BCP
     Y doy clic al numero a transferir
     Y ingreso el monto "<monto>"
     Y ingreso un comentario
-#    Y doy clic al boton para transferencia
-#    Entonces valido que se haya realizado la transferencia
+    Y doy clic al boton para transferencia
+    Entonces valido que se haya realizado la transferencia
     Ejemplos:
       | celular    | password |celular_soli | monto |
       | 71542767   | 1234     |71532355     | 0.10  |
