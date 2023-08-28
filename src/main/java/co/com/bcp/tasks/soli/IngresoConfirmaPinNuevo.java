@@ -11,21 +11,23 @@ import static co.com.bcp.interactions.HideKeyboard.theActorHidesKeyboard;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
-public class IngresoMensajeOpcional implements Task {
+public class IngresoConfirmaPinNuevo implements Task {
 
-    public IngresoMensajeOpcional() {
-        //Task
+    private final String pin_new;
+
+    public IngresoConfirmaPinNuevo(String pin_new) {
+        this.pin_new = pin_new;
     }
-    public static IngresoMensajeOpcional withTheFollowingFields() {
-        return instrumented(IngresoMensajeOpcional.class);
+    public static IngresoConfirmaPinNuevo withTheFollowingFields(String pin_new) {
+        return instrumented(IngresoConfirmaPinNuevo.class, pin_new);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                WaitUntil.the(TransferenciaSoliPage.TXT_OPCIONAL, isEnabled()).forNoMoreThan(5).seconds(),
-                Click.on(TransferenciaSoliPage.TXT_OPCIONAL),
-                Enter.theValue("Transferencia QA").into(TransferenciaSoliPage.TXT_OPCIONAL),
+                WaitUntil.the(TransferenciaSoliPage.TXT_CONFIRMA_PIN, isEnabled()).forNoMoreThan(5).seconds(),
+                Click.on(TransferenciaSoliPage.TXT_CONFIRMA_PIN),
+                Enter.theValue(pin_new).into(TransferenciaSoliPage.TXT_CONFIRMA_PIN),
                 theActorHidesKeyboard());
     }
 }

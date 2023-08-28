@@ -7,17 +7,17 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AccesoContactos implements Task {
+public class OpcionTransferenciaOB implements Task {
 
-    public AccesoContactos() {
+    public OpcionTransferenciaOB() {
         //Task
     }
-    public static AccesoContactos withTheFollowingFields() {
-        return instrumented(AccesoContactos.class);
+    public static OpcionTransferenciaOB element() {
+        return instrumented(OpcionTransferenciaOB.class);
     }
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                Click.on(TransferenciaSoliPage.BTN_ACCESO_CONTACTOS));
+                Click.on(TransferenciaSoliPage.BTN_CONSULTA_TRANSFERENCIA_OTROS_SOLI));
     }
 }

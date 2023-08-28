@@ -18,6 +18,6 @@ public class OpcionSaldosMovimientos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                Click.on(TransferenciaSoliPage.BTN_SALDOS_MOVIMIENTOS));
+                Click.on(TransferenciaSoliPage.BTN_CONSULTA_SALDOS_MOVIMIENTOS));
     }
 }

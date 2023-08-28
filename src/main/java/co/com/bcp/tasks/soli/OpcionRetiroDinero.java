@@ -7,17 +7,17 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AccesoContactos implements Task {
+public class OpcionRetiroDinero implements Task {
 
-    public AccesoContactos() {
+    public OpcionRetiroDinero() {
         //Task
     }
-    public static AccesoContactos withTheFollowingFields() {
-        return instrumented(AccesoContactos.class);
+    public static OpcionRetiroDinero element() {
+        return instrumented(OpcionRetiroDinero.class);
     }
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                Click.on(TransferenciaSoliPage.BTN_ACCESO_CONTACTOS));
+                Click.on(TransferenciaSoliPage.BTN_CONSULTA_RETIRO_DINERO));
     }
 }
